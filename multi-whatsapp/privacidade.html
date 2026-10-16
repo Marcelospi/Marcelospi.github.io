@@ -5,41 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de Privacidade – Multi WhatsApp</title>
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #222; }
+  body { font-family: system-ui, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #222; }
   h1 { color: #128C7E; }
+  h2 { margin-top: 32px; }
+  .tabela { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+  th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f2f2f2; }
 </style>
 </head>
 <body>
 <h1>Política de Privacidade</h1>
-<p><em>Última atualização: 9 de outubro de 2026</em></p>
+<p><em>Última atualização: 16 de outubro de 2026</em></p>
 
-<h2>Quem somos</h2>
-<p>O Multi WhatsApp é um aplicativo desenvolvido por Marcelo para uso interno. Contato: <a href="mailto:marcelo.spi01@gmail.com">marcelo.spi01@gmail.com</a>.</p>
+<h2>1. Quem somos e qual é o nosso papel</h2>
+<p>O Multi WhatsApp é um programa instalado no computador da empresa que o contrata (o "cliente"), para organizar o atendimento de várias contas de WhatsApp em um só lugar. Ele é desenvolvido e fornecido por Marcelo (o "fornecedor"). Contato: <a href="mailto:marcelo.spi01@gmail.com">marcelo.spi01@gmail.com</a>.</p>
+<p>O cliente decide o que fazer com os dados dos clientes e da equipe dele: é o controlador desses dados, nos termos da Lei Geral de Proteção de Dados (Lei 13.709/2018). O fornecedor é controlador apenas dos dados de cadastro e cobrança do cliente e dos números de uso descritos no item 4. Quando presta suporte com acesso ao computador do cliente, ou quando a inteligência artificial passa pelo crédito do fornecedor, ele trata dados em nome do cliente (operador).</p>
 
-<h2>Dados que acessamos</h2>
-<p>Quando você autoriza o acesso à sua Conta do Google, o aplicativo pode acessar:</p>
+<h2>2. Onde ficam os dados</h2>
+<p>Tudo o que a equipe usa no programa fica no computador do cliente: conversas, áudios, fotos, documentos, contatos, empresas, propostas, lembretes, anotações, a equipe e os registros de uso. O fornecedor não tem cópia.</p>
+<p>O programa guarda sozinho uma cópia diária do banco de dados no próprio computador (as 7 mais recentes). A cópia de segurança com senha vai para onde o cliente escolher.</p>
+<p>Os áudios são transcritos no próprio computador; eles nunca saem dele para isso.</p>
+
+<h2>3. O que sai do computador</h2>
+<div class="tabela">
+<table>
+  <tr><th>Para onde</th><th>O quê</th><th>Quando</th></tr>
+  <tr><td>WhatsApp (Meta)</td><td>As mensagens, fotos e arquivos enviados e recebidos.</td><td>Sempre que o programa envia ou recebe.</td></tr>
+  <tr><td>Google – inteligência artificial (Gemini)</td><td>O que a IA precisa para o pedido: texto das conversas, transcrições, nome e empresa do contato e anotações internas. Com a chave gratuita do Google, o Google pode usar o conteúdo para melhorar os produtos dele; com a chave paga, não.</td><td>Só com a IA ligada num modo que usa o Google, pela chave do próprio cliente ou pelo crédito do fornecedor. No modo "Somente Ollama Local", nada sai.</td></tr>
+  <tr><td>Serviço online do fornecedor (Cloudflare) – ponte da IA</td><td>O mesmo texto, só de passagem até o Google. Não é guardado.</td><td>Só com o crédito de IA do fornecedor.</td></tr>
+  <tr><td>Google – Tarefas, Drive e Agenda</td><td>O texto dos lembretes; os arquivos escolhidos; os compromissos.</td><td>Só para quem ligar a própria conta do Google (item 8).</td></tr>
+  <tr><td>Google – Maps</td><td>O endereço consultado.</td><td>Quando alguém abre um mapa ou um endereço.</td></tr>
+  <tr><td>Google – letras da tela (Google Fonts)</td><td>O endereço de internet de quem abre a tela.</td><td>Ao abrir o programa.</td></tr>
+  <tr><td>BrasilAPI</td><td>O CNPJ consultado.</td><td>Quando alguém busca os dados de uma empresa pelo CNPJ.</td></tr>
+  <tr><td>Serviço online do fornecedor – sinal de vida</td><td>Licença, código do computador, versão e números de uso (item 4).</td><td>Uma vez por dia.</td></tr>
+  <tr><td>Serviço online do fornecedor – atualizações</td><td>O código da licença e o código do computador, para saber qual versão entregar.</td><td>Ao procurar e baixar uma atualização.</td></tr>
+  <tr><td>Serviços de aviso dos navegadores (Google, Mozilla, Microsoft, Apple)</td><td>Um aviso cifrado com texto genérico ("cliente esperando", "lembrete prioritário"), sem nome nem telefone.</td><td>Só para quem ligou o aviso no celular.</td></tr>
+  <tr><td>Tailscale</td><td>A conexão cifrada entre o computador do programa e o celular ou os computadores da equipe.</td><td>Só se o cliente ligar o acesso pela rede.</td></tr>
+</table>
+</div>
+
+<h2>4. O que o fornecedor recebe</h2>
 <ul>
-  <li>Informações básicas da conta (nome e e-mail), para identificar quem está conectado;</li>
-  <li>Suas listas e tarefas do Google Tarefas, para criar, ler e atualizar tarefas ligadas aos atendimentos;</li>
-  <li>Arquivos do Google Drive, para salvar e abrir arquivos usados nos atendimentos;</li>
-  <li>Eventos do Google Agenda, quando você autorizar, para agendar compromissos ligados aos atendimentos.</li>
+  <li><strong>Sinal de vida, uma vez por dia:</strong> código da licença, código do computador, versão e situação da licença; contagens por número e por dia (mensagens enviadas e recebidas, pessoas novas, envios em massa, mensagens que esperaram a vez, horário de pico); o nome que o cliente deu a cada número; quedas de conexão; períodos com o programa desligado; quantidade de usuários ativos; espaço em disco; até 3 exemplos curtos de erro por dia, com as sequências de algarismos apagadas; contagens de uso da IA. <strong>Nunca conversas, contatos nem telefones.</strong></li>
+  <li><strong>Cadastro e cobrança:</strong> nome da empresa, CNPJ, nome e contato do responsável, plano e pagamentos.</li>
+  <li><strong>IA pelo crédito do fornecedor:</strong> a quantidade de pedidos e de texto por dia e por modelo, para descontar o crédito. Nunca o texto.</li>
+  <li><strong>Suporte:</strong> o que o fornecedor vê durante um acesso que o próprio cliente libera, por tempo limitado. Nada é copiado.</li>
+  <li><strong>Cópia de segurança:</strong> o fornecedor guarda uma chave de recuperação que só serve para ajudar quem esqueceu a senha da cópia. Ele nunca recebe o arquivo.</li>
 </ul>
-<p>O aplicativo também usa serviços do Google Maps para mostrar mapas, localizar endereços e calcular rotas. Para isso, os endereços consultados são enviados à Google Maps Platform, conforme os <a href="https://cloud.google.com/maps-platform/terms">termos da Google Maps Platform</a>.</p>
 
-<h2>Como usamos os dados</h2>
-<p>Os dados são usados apenas para oferecer as funções do aplicativo. Eles ficam armazenados localmente no computador onde o aplicativo está instalado.</p>
+<h2>5. Por quanto tempo</h2>
+<ul>
+  <li>No computador do cliente: até o cliente apagar.</li>
+  <li>Sinal de vida: o serviço guarda o último sinal de cada computador e o horário dos sinais dos últimos 30 dias.</li>
+  <li>Texto da IA que passa pela ponte: não é guardado.</li>
+  <li>Cadastro e cobrança: enquanto durar o contrato e, depois, pelo prazo que a lei exigir.</li>
+</ul>
 
-<h2>Compartilhamento</h2>
-<p>Não vendemos, alugamos nem compartilhamos seus dados com terceiros.</p>
+<h2>6. Segurança</h2>
+<ul>
+  <li>Cada pessoa entra com o próprio login; a senha fica guardada embaralhada, de um jeito que não dá para ler de volta.</li>
+  <li>Cada pessoa só vê o que as permissões dela deixam. A conta particular de uma pessoa não abre nem para o administrador.</li>
+  <li>O programa só atende no próprio computador. Celular e outros computadores entram só por conexão cifrada e com login.</li>
+  <li>A chave do Google da própria empresa e as autorizações das contas do Google ficam trancadas no computador do cliente, pelo Windows.</li>
+  <li>A cópia de segurança e o pacote para levar um número a outro computador saem cifrados, com senha.</li>
+  <li>A licença e as atualizações são assinadas pelo fornecedor; o programa recusa o que não tiver a assinatura.</li>
+  <li>A chave do Google usada no crédito de IA do fornecedor fica trancada no serviço online e nunca chega ao computador do cliente.</li>
+</ul>
 
-<h2>Uso de dados do Google</h2>
-<p>O uso e a transferência de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+<h2>7. Direitos de quem tem dados no programa</h2>
+<p>A LGPD (art. 18) garante, entre outros, o direito de confirmar se há tratamento, de acessar e corrigir os dados, de pedir a eliminação de dados desnecessários e de saber com quem os dados foram compartilhados. Os clientes e funcionários de uma empresa que usa o programa fazem esses pedidos à própria empresa, que é a controladora dos dados; o fornecedor ajuda essa empresa quando for preciso. Pedidos sobre os dados de cadastro e cobrança: <a href="mailto:marcelo.spi01@gmail.com">marcelo.spi01@gmail.com</a>.</p>
 
-<h2>Como revogar o acesso</h2>
-<p>Você pode remover o acesso do aplicativo a qualquer momento em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+<h2>8. Dados das contas do Google</h2>
+<p>Quando uma pessoa liga a própria Conta do Google ao programa, ele pode acessar:</p>
+<ul>
+  <li>Informações básicas da conta (nome, e-mail e foto), para identificar quem está conectado e para entrar com o Google;</li>
+  <li>As listas e tarefas do Google Tarefas, para criar, ler e atualizar tarefas ligadas aos atendimentos;</li>
+  <li>Os arquivos do Google Drive criados ou escolhidos pela pessoa no programa, para salvar e abrir arquivos usados nos atendimentos;</li>
+  <li>Os eventos do Google Agenda, quando a pessoa autorizar, para agendar compromissos ligados aos atendimentos.</li>
+</ul>
+<p>O programa também usa o Google Maps para mostrar mapas, localizar endereços e calcular rotas. Para isso, os endereços consultados são enviados à Google Maps Platform, conforme os <a href="https://cloud.google.com/maps-platform/terms">termos da Google Maps Platform</a>.</p>
+<p>Os dados das contas do Google ficam no computador do cliente e são usados apenas para oferecer essas funções. Eles não são vendidos, não são usados para propaganda e o programa não os usa para treinar modelos de inteligência artificial. O uso e a transferência de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+<p>Cada pessoa pode remover o acesso do programa à conta do Google a qualquer momento, em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
 
-<h2>Exclusão de dados</h2>
-<p>Para pedir a exclusão dos seus dados, escreva para <a href="mailto:marcelo.spi01@gmail.com">marcelo.spi01@gmail.com</a>.</p>
+<h2>9. Cookies</h2>
+<p>O programa usa um cookie só para manter cada pessoa conectada. Não há cookies de propaganda nem de rastreamento.</p>
+
+<h2>10. Dados fora do Brasil</h2>
+<p>Os serviços da tabela do item 3 (Google, Cloudflare, Meta, Tailscale e os serviços de aviso dos navegadores) podem processar dados em outros países, conforme as regras de cada um.</p>
+
+<h2>11. Exclusão de dados</h2>
+<p>Os dados ficam no computador do cliente, e é o próprio cliente quem os apaga. Para pedir a exclusão dos dados de cadastro e cobrança, ou ajuda para apagar dados do programa, escreva para <a href="mailto:marcelo.spi01@gmail.com">marcelo.spi01@gmail.com</a>.</p>
+
+<h2>12. Contato sobre privacidade</h2>
+<p>Dúvidas e pedidos sobre privacidade: <a href="mailto:marcelo.spi01@gmail.com">marcelo.spi01@gmail.com</a>.</p>
+
+<h2>13. Mudanças nesta política</h2>
+<p>A data no topo mostra a última mudança. Quando a mudança for importante, os clientes serão avisados.</p>
 
 <p><a href="index.html">Voltar ao início</a></p>
 </body>
